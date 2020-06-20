@@ -15,7 +15,7 @@ def main():
     '''
 
     # create an instance of the light with its IP address
-    light = LB130("10.0.0.130")
+    light = LB130("192.168.1.181")
 
     # fetch the details for the light
     print("Device ID: " + light.device_id)

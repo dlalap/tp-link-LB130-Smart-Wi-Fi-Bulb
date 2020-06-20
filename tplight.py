@@ -17,7 +17,7 @@ class LB130(object):
 
     encryption_key = 0xAB
 
-    __udp_ip = "10.0.0.130"
+    __udp_ip = "192.168.1.181"
     __udp_port = 9999
     __on_off = 0
     __transition_period = 0
@@ -70,10 +70,10 @@ class LB130(object):
                 col3 = 'light_state'
                 self.__alias = data[col1][col2]['alias']
                 self.__on_off = int(data[col1][col2][col3]['on_off'])
-                self.__hue = int(data[col1][col2][col3]['hue'])
-                self.__saturation = int(data[col1][col2][col3]['saturation'])
-                self.__brightness = int(data[col1][col2][col3]['brightness'])
-                self.__color_temp = int(data[col1][col2][col3]['color_temp'])
+                #self.__hue = int(data[col1][col2][col3]['hue'])
+                #self.__saturation = int(data[col1][col2][col3]['saturation'])
+                #self.__brightness = int(data[col1][col2][col3]['brightness'])
+                #self.__color_temp = int(data[col1][col2][col3]['color_temp'])
                 self.device_id = str(data[col1][col2]['deviceId'])
             except (RuntimeError, TypeError, ValueError) as exception:
                 raise Exception(exception)
